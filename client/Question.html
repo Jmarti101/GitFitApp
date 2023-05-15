@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Questionnaire</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="Qstyles.css">
+    
+
+</head>
+
+<body>
+
+    <div class="entireBackground">
+        
+
+        <div class="heading-field">
+            
+        <h1>Stay Fit! 
+            <br>
+            questionnaire
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="index.html" class="breadcrumbs__link"> /Home</a>
+                </li>
+            </ul>
+        </h1>
+        <h2>Answer the following questions:</h2>
+        </div>
+
+        <form action="responsive.html" method="GET">
+
+        <div class="form-box">
+
+
+
+        <div class="integer-fields">
+
+        <label for="age">What is your age?</label>
+        <br>
+        <input type="number" id="age" name="age">
+
+<br>
+
+        <label for="weight">What is your weight? (pounds)</label>
+        <br>
+        <input type="number" id="weight" name="weight">
+
+<br>
+
+        <label for="height">What is your height? (inches)</label>
+        <br>
+        <input type="number" id="height" name="height">
+        
+        </div> <!--integer field-->
+
+
+        
+        <div class="dropDown-field">
+
+        <label for="gender">What is your birth sex?</label>
+        <br>
+        <select name="gender" id="gender">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+
+        </select>
+<br>
+
+        <label for="workoutIntensity">How physically active are you?</label>
+        <br>
+        <select name="activity" id="activity">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="High">Between 5-7 times a week</option>
+            <option value="Intermediate">Between 3-4 times a week</option>
+            <option value="Low">Between 1-2 times a week</option>
+
+        </select>
+
+<br>
+
+        <label for="fitnessGoal">What is your current fitness goal?</label>
+        <br>
+        <select name="goal" id="goal">
+            <option selected disabled hidden style='display: none' value=''></option>
+            <option value="lose">Lose weight</option>
+            <option value="gain">Gain weight</option>
+            <option value="maintain">Maintain weight</option>
+
+
+        </select>
+
+    </div> <!--dropdown field-->
+
+    <div class="SEND">
+        
+        <!--onclick="myFunct()"  THIS WAS INSERTED INTO BUTTON AND RAN JS SCRIPT  SEE BELOW-->
+    <button type="submit" >SUBMIT</button>
+        
+    </div>
+
+
+</form>
+
+</div>
+
+   <!-- <script>
+        const form = document.getElementById('form');
+        const age = document.getElementById('age');
+
+        form.addEventListener('submit',function(e){
+            e.preventDefault();
+
+            const passedAge=age.value;
+
+            localStorage.setItem('passed-age',JSON.stringify({passedAge}));
+
+            window.location.href="responsive.html";
+
+        })
+        
+    </script>-->
+    </div>
+    
+    
+
+
+
+</body>
+</html>

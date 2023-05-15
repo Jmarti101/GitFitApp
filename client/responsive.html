@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="responsiveStyles.css">
+    <title>Responsive Page</title>
+    <script src="responsive.js"></script>
+</head>
+<body>
+
+    <div class="box-area">
+        <header>
+            <div class="wrapper">
+                <div class="logo">
+                <a href="index.html">Stay Fit!</a>
+                </div>
+
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="Question.html">Calculate portion sizes</a>
+                    <a href="randomMotivation.html">Get motivation</a>
+                    <a href="foodLog.html">Log a meal</a>
+                    <a href="eatBetter.html">How to eat better!</a>
+                    
+
+
+                </nav>
+            </div>
+
+        </header>
+        <div class="banner-area">
+            <h2>Where Fitness <a>Stays</a> Simple</h2>
+        </div>
+
+        <div class="content-area">
+            <div class="wrapper">
+                <h2>Your information</h2>
+                <p>
+                <div class="basic_outputs">
+                    <p id="age_res"></p>
+<br>
+                    <p id="weight_res"></p>
+<br>
+                    <p id="height_res"></p>
+<br>
+                    <p id="sex_res"></p>
+<br>
+                    <p id="activity_res"></p>
+<br>
+                    <p id="goal_res"></p>
+                </div>
+
+                </p>
+                    
+                <p>
+
+                </p>
+                <h3>Here are your portion sizes!</h3>
+                <div class="portion_sizes">
+                    <h4>Calories:</h4>
+                        <p id="calories__field" >
+
+                        </p>
+                    <h4>Protein:</h4>
+                        <p id="protein__field">
+
+                        </p>
+                    <h4>Fats:</h4>
+                        <p id="fats__field">
+
+                        </p>
+                    <h4>Carbs:</h4>
+                        <p id="carbs__field">
+
+                        </p>
+                    <h4>Vegetables:</h4>
+                        <p id="vegs__field">
+
+                        </p>
+                    
+                    
+                </div>
+
+                <div class="suggestion">
+                    <h3>Our suggestions based on your input: </h3>
+                    <p id="suggestion__field">
+
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <!--at this point u wanna make the single page application here
+        calc calories needed
+        calc nutrional meal proportions in grams or percentage
+        calc a basic workout plan
+        logworkout
+        tutorial videos
+    even logworkout seems possible with all of the grid options available on mozilla
+    -->
+   
+        
+
+
+
+
+
+    
+   
+   <!-- <script>
+        function showAge()
+        {
+        document.getElementById("parameter").innerHTML=window.location.search;
+        }
+    </script>
+
+    <script>
+
+        const newAge = JSON.parse(localStorage.getItem('passed-age'));
+        document.getElementById('passed-age').textContent = newAge;
+
+    </script>-->
+
+    <script>
+       var aged = window.location.search;
+       var ageParam = new URLSearchParams(aged);
+       var age = ageParam.get("age");
+       var getAge ="Age: "+age;
+       document.getElementById("age_res").innerHTML = getAge;
+
+        var weightVar = window.location.search;
+        var weightParam = new URLSearchParams(weightVar);
+        var weight = weightParam.get("weight");
+        var getWeight = "Your weight is: " + weight;
+        document.getElementById("weight_res").innerHTML = getWeight;
+        
+        var heightVar = window.location.search;
+        var heightParam = new URLSearchParams(heightVar);
+        var height = heightParam.get("height");
+        var getHeight = "Your height (in): " + height;
+        document.getElementById("height_res").innerHTML = getHeight;
+
+        var sexVar = window.location.search;
+        var sexParam = new URLSearchParams(sexVar);
+        var sex = sexParam.get("gender");
+        var getSex = "Your sex is: " + sex;
+        document.getElementById("sex_res").innerHTML = getSex;
+
+        var activityVar = window.location.search;
+        var activityParam = new URLSearchParams(activityVar);
+        var activity = activityParam.get("activity");
+        var getActivity = "Your usual workout intesity is: " + activity;
+        document.getElementById("activity_res").innerHTML = getActivity;
+        
+        var goalVar = window.location.search;
+        var goalParam = new URLSearchParams(goalVar);
+        var goal = goalParam.get("goal");
+        var getGoal = "Your goal is to: " + goal + " weight!";
+        document.getElementById("goal_res").innerHTML = getGoal;
+
+        
+
+            //variable declarations
+        var WT_TO_KG=weight/(2.2);
+        var HT_TO_CM=height*(2.54);
+
+        if(sex==='male'){
+        //male
+        var RMR= 66.5 + (13.8 * WT_TO_KG) + (5 * HT_TO_CM) - (6.76 * age);
+        
+        var getCals = "The amount of calories you need per day: " + RMR.toFixed(2) ;
+        document.getElementById("calories__field").innerHTML = getCals;
+
+        
+
+        }
+        else{
+        //female if gender =2
+        var RMR= 655 + (9.56* WT_TO_KG) + (1.85 * HT_TO_CM) - (4.68 * age);
+        
+        var getCals = "The amount of calories you need per day: " + RMR.toFixed(2);
+        document.getElementById("calories__field").innerHTML = getCals;
+
+        }
+
+        
+        var protein = (RMR)*(.25);
+        let getProtein = "Your daily intake should contain " + protein.toFixed(2) + " grams of protein rich foods every day (chicken,steak)";
+        document.getElementById("protein__field").innerHTML = getProtein;
+
+        var fats = (RMR)*(.10);
+        let getFats = "Your daily intake should contain " + fats.toFixed(2) + " grams of fatty foods every day (avocadoes, cheese, eggs)";
+        document.getElementById("fats__field").innerHTML = getFats;
+
+        var carbs = (RMR)*(.25);
+        let getCarbs = "Your daily intake should contain " + carbs.toFixed(2) + " grams of carb rich foods every day (grains, fruits,yogurts)";
+        document.getElementById("carbs__field").innerHTML = getCarbs;
+
+        var vegs = (RMR)*(.40);
+        let getVegs = "Your daily intake should contain " + vegs.toFixed(2) + " grams of vegetables every day ";
+        document.getElementById("vegs__field").innerHTML = getVegs;
+
+        if(goal === 'lose') {
+            if(activity==='High'){
+                let getSuggestion = "Because your goal is to " + goal + " weight and your activity is " + activity + " we suggest reducing your caloric intake by 250 calories.";
+                document.getElementById("suggestion__field").innerHTML = getSuggestion;
+            }
+            if(activity==='Low'){
+                let getSuggestion = "Because your goal is to " + goal + " weight and your activity is " + activity + " we suggest reducing your caloric intake by 400 calories.";
+                document.getElementById("suggestion__field").innerHTML = getSuggestion;
+            }
+            if(activity==='Intermediate'){
+                let getSuggestion = "Because your goal is to " + goal + " weight and your activity is " + activity + " we suggest reducing your caloric intake by 300 calories.";
+                document.getElementById("suggestion__field").innerHTML = getSuggestion;
+            }
+
+        }
+        if(goal ==='gain'){
+            if(activity==='High'){
+                let getSuggestion = "Because your goal is to " + goal + " weight and your activity is " + activity + " we suggest increasing your caloric intake by 400 calories.";
+                document.getElementById("suggestion__field").innerHTML = getSuggestion;
+            }
+            if(activity==='Low'){
+                let getSuggestion = "Because your goal is to " + goal + " weight and your activity is " + activity + " we suggest increasing your caloric intake by 200 calories.";
+                document.getElementById("suggestion__field").innerHTML = getSuggestion;
+            }
+            if(activity==='Intermediate'){
+                let getSuggestion = "Because your goal is to " + goal + " weight and your activity is " + activity + " we suggest increasing your caloric intake by 350 calories.";
+                document.getElementById("suggestion__field").innerHTML = getSuggestion;
+            }
+
+        }
+        if(goal === 'maintain'){
+            if(activity==='High'){
+                let getSuggestion = "Because your goal is to " + goal + " weight and your activity is " + activity + " we suggest keeping your caloric intake around 75 calories higher than your usual RMR.";
+                document.getElementById("suggestion__field").innerHTML = getSuggestion;               
+            }
+            if(activity==='Low'){
+                let getSuggestion = "Because your goal is to " + goal + " weight and your activity is " + activity + " we suggest keeping your caloric intake around 75 calories less than your usual RMR.";
+                document.getElementById("suggestion__field").innerHTML = getSuggestion;  
+            }
+            if(activity==='Intermediate'){
+                let getSuggestion = "Because your goal is to " + goal + " weight and your activity is " + activity + " we suggest keeping your caloric intake around  your usual RMR.";
+                document.getElementById("suggestion__field").innerHTML = getSuggestion;  
+            }
+
+        }
+        
+
+
+
+    </script>
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

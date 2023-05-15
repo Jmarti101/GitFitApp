@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    border: 5px solid red;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background: red;
+    position: fixed;
+}
+.logo{
+    width: 30%;
+    float: left;
+    text-align: left;
+    line-height: 100px;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+}
+.logo a{
+    text-decoration: none;
+    font-size: 35px;
+    font-family: impact;
+    color: whitesmoke;
+    letter-spacing: 3px;
+    font-weight: 800;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+}
+nav{
+    float: right;
+    line-height: 100px;
+
+}
+nav a{
+    text-decoration: none;
+    font-family: impact;
+    letter-spacing: 2px;
+    color: whitesmoke;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    
+}
+
+nav a:hover{
+    background: darkred;
+    color: whitesmoke;
+    
+}
+.banner-area{
+    background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)),url(fitness.png);
+    background-size: cover;
+    background-position: center center;
+    top: 100px;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+}
+.banner-area:after{
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+}
+.banner-area h2{
+    padding-top: 8%;
+    font-size: 60px;
+    color: white;
+    
+}
+.banner-area h2 > a{
+    text-decoration: underline black 5px;
+}
+
+
+.content-area{
+    width: 100%;
+    height: 800px;
+    position: relative;
+    background: white;
+    top: 600px;
+}
+.content-area h2{
+    font-size: 40px;
+    margin: 0;
+    padding-top: 30px;
+    letter-spacing: 4px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: overline red;
+}
+.content-area h3{
+    font-size: 25px;
+    margin: 0;
+    padding-top: 15px;
+    letter-spacing: 4px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.content-area p{
+    text-indent: 5%;
+    padding: 2% 0;
+    line-height: 30px;
+    text-align: justify;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 200;
+    text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+}
+
+

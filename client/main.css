@@ -1,0 +1,25 @@
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    padding: 5%;
+    border: 5px solid red;
+    padding-bottom: 550px;
+}
+
+main{
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+table, th, td{
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+th,td{
+    padding: 10px;
+}
+table{
+    margin: 50px auto;
+
+}

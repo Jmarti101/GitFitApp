@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Database OTW</title>
+    <link rel="stylesheet" href="main.css">
+    
+</head>
+<body style="margin:30px">
+<div class="wrapper">
+
+    <main>
+        <label>Item name:</label>
+        <input type="text" id="food-input">
+        <button id="add-name-btn">Add food name</button>
+<br><br><br>
+        <div>
+            <!--<input type="text" placeholder="search by name" id="search-input">
+            <button id="search-input">Search</button>-->
+        </div>
+        <table id="table">
+            <thead>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Date added</th>
+                <th>Delete</th>
+                <!--<th>Edit</th>-->
+            </thead>
+            <tbody></tbody>
+        </table>
+        <section hidden id="update-row">
+            <label>Name:</label>
+            <input type="text" id="update-name-input">
+            <button id="update-row-btn">Update</button>
+        </section>
+    </main>
+</div>
+    
+    <script src="jquery.js"></script>
+
+
+
+</body>
+</html>
